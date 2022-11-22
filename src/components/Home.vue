@@ -10,7 +10,7 @@
                 :amount="amount"
             >
                 <template #graphic>
-                    Graphic
+                    <Graphic :amounts="amounts" />
                 </template>
                 <template #action>
                     <Action />
@@ -31,12 +31,14 @@
     import Resume from './Resume/Index.vue';
     import Movements from './Movements/Index.vue';
     import Action from './Action.vue';
+    import Graphic from './Resume/Graphic.vue';
 
     export default {
         data() {
             return {
                 amount: null,
                 label: 'Ahorro total',
+                amounts:[100, 200, 500, 200, -400, -600, -300, 0, 300, 500],
                 movements: [
                     {
                     id: 1,
@@ -76,7 +78,8 @@
             Layout, 
             Resume,
             Movements,
-            Action
+            Action,
+            Graphic
         }
     }
 </script>
